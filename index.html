@@ -3,22 +3,55 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Visualizaciones — Aseguramientos de drogas</title>
+<title>Visualizaciones — Acciones militares en materia de drogas</title>
 <style>
-  body{font-family:-apple-system,Helvetica,Arial,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem;color:#333}
-  h1{color:#44375B} h2{color:#44375B;margin-top:2.5rem}
+  body{font-family:'Lato',-apple-system,Helvetica,Arial,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem;color:#333}
+  h1{color:#44375B} h2{color:#44375B;margin-top:2.5rem;border-top:2px solid #AEA793;padding-top:.6rem}
+  h3{color:#44375B;margin-top:1.8rem}
   iframe{width:100%;border:0;border:1px solid #eee;border-radius:6px}
   code{background:#f5f5f5;padding:2px 5px;border-radius:4px}
 </style>
 </head>
 <body>
-  <h1>Aseguramientos de drogas — visualizaciones</h1>
-  <p>Cada gráfica es un archivo HTML autocontenido. Para embeber en otra página usa su iframe.</p>
+  <h1>Acciones militares en materia de drogas — visualizaciones</h1>
+  <p>Cada gráfica y tabla es un archivo HTML autocontenido (tipografía Lato y paleta de marca incrustadas). Para embeber en otra página usa su <code>iframe</code>.</p>
 
-  <h2>Composición por grupo de droga</h2>
-  <iframe src="comp_aseguramientos.html" height="600"></iframe>
+  <h2>Aseguramientos</h2>
 
-  <h2>Mapa de aseguramientos por municipio</h2>
-  <iframe src="aseg_mapa_puntos.html" height="640"></iframe>
+  <h3>Composición por grupo de droga</h3>
+  <iframe src="comp_aseguramientos.html" height="600" loading="lazy"></iframe>
+
+  <h3>Tendencias por droga</h3>
+  <iframe src="aseg_tendencias.html" height="720" loading="lazy"></iframe>
+
+  <h3>Tabla descriptiva por tipo de droga</h3>
+  <iframe src="aseg_tabla.html" height="620" loading="lazy"></iframe>
+
+  <h3>Mapa por municipio</h3>
+  <iframe src="aseg_mapa_puntos.html" height="700" loading="lazy"></iframe>
+
+  <h2>Laboratorios clandestinos</h2>
+
+  <h3>Tendencias por año y tipo de droga</h3>
+  <iframe src="lab_tendencias.html" height="420" loading="lazy"></iframe>
+
+  <h3>Mapa por municipio</h3>
+  <iframe src="lab_mapa.html" height="700" loading="lazy"></iframe>
+
+  <h2>Erradicaciones — Amapola</h2>
+
+  <h3>Tendencias (hectáreas / plantíos)</h3>
+  <iframe src="amapola_tendencias.html" height="560" loading="lazy"></iframe>
+
+  <h3>Tabla por estado</h3>
+  <iframe src="amapola_tabla.html" height="620" loading="lazy"></iframe>
+
+  <h2>Erradicaciones — Mariguana</h2>
+
+  <h3>Tendencias (hectáreas / plantíos)</h3>
+  <iframe src="mariguana_tendencias.html" height="560" loading="lazy"></iframe>
+
+  <h3>Tabla por estado</h3>
+  <iframe src="mariguana_tabla.html" height="620" loading="lazy"></iframe>
 </body>
 </html>
