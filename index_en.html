@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monitor 1 — Charts</title>
+<style>
+  body{font-family:'Lato',-apple-system,Helvetica,Arial,sans-serif;max-width:1060px;margin:2rem auto;padding:0 1rem;color:#333;background:#fff}
+  header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+  h1{color:#403A5E;font-size:1.6rem;margin:0}
+  .lang{color:#403A5E;font-weight:700;text-decoration:none;border:1px solid #403A5E;border-radius:6px;padding:.3rem .8rem}
+  .lang:hover{background:#403A5E;color:#fff}
+  p{color:#555}
+  code{background:#f5f5f5;padding:2px 5px;border-radius:4px}
+  section{margin:2rem 0}
+  iframe{display:block;width:100%;border:0;border-radius:6px}
+  .open{display:inline-block;margin-top:.4rem;font-size:.85rem;color:#403A5E}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Monitor 1 — Charts</h1>
+    <a class="lang" href="index_es.html" hreflang="es">Español</a>
+  </header>
+  <p>Each chart is a self-contained HTML file. To embed one in another page, use its <code>iframe</code> (link below each chart).</p>
+  <section>
+    <iframe src="mapa_enforcement_en.html" title="Counter-narcotic enforcement operations by the Mexican Army, by presidential term (1990–2024)" height="900" loading="lazy"></iframe>
+    <a class="open" href="mapa_enforcement_en.html">Open on its own ↗</a>
+  </section>
+  <section>
+    <iframe src="comp_aseguramientos_en.html" title="Seizures by drug type, Mexico, 1990–2024" height="660" loading="lazy"></iframe>
+    <a class="open" href="comp_aseguramientos_en.html">Open on its own ↗</a>
+  </section>
+  <section>
+    <iframe src="aseg_tabla_en.html" title="Reported drug seizures by the Mexican Army, 1990–June 2024, by quantity" height="780" loading="lazy"></iframe>
+    <a class="open" href="aseg_tabla_en.html">Open on its own ↗</a>
+  </section>
+  <section>
+    <iframe src="aseg_tendencias_en.html" title="Drug seizures in Mexico by substance, 1990–2024" height="1700" loading="lazy"></iframe>
+    <a class="open" href="aseg_tendencias_en.html">Open on its own ↗</a>
+  </section>
+  <section>
+    <iframe src="aseg_mapa_puntos_en.html" title="Geographic distribution of drug seizures by decade and substance" height="900" loading="lazy"></iframe>
+    <a class="open" href="aseg_mapa_puntos_en.html">Open on its own ↗</a>
+  </section>
+  <section>
+    <iframe src="lab_mapa_en.html" title="Laboratory seizures over 10-year periods" height="860" loading="lazy"></iframe>
+    <a class="open" href="lab_mapa_en.html">Open on its own ↗</a>
+  </section>
+<script>
+  // Ajusta la altura de cada iframe a su contenido (mismo origen)
+  document.querySelectorAll("iframe").forEach(f => {
+    const fit = () => { try { f.style.height = f.contentDocument.documentElement.scrollHeight + "px" } catch (e) {} }
+    f.addEventListener("load", () => { fit(); setTimeout(fit, 1500); setTimeout(fit, 4000) })
+  })
+</script>
+</body>
+</html>

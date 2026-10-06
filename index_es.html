@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monitor 1 — Gráficas</title>
+<style>
+  body{font-family:'Lato',-apple-system,Helvetica,Arial,sans-serif;max-width:1060px;margin:2rem auto;padding:0 1rem;color:#333;background:#fff}
+  header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+  h1{color:#403A5E;font-size:1.6rem;margin:0}
+  .lang{color:#403A5E;font-weight:700;text-decoration:none;border:1px solid #403A5E;border-radius:6px;padding:.3rem .8rem}
+  .lang:hover{background:#403A5E;color:#fff}
+  p{color:#555}
+  code{background:#f5f5f5;padding:2px 5px;border-radius:4px}
+  section{margin:2rem 0}
+  iframe{display:block;width:100%;border:0;border-radius:6px}
+  .open{display:inline-block;margin-top:.4rem;font-size:.85rem;color:#403A5E}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Monitor 1 — Gráficas</h1>
+    <a class="lang" href="index_en.html" hreflang="en">English</a>
+  </header>
+  <p>Cada gráfica es un archivo HTML autocontenido. Para embeberla en otra página, usa su <code>iframe</code> (enlace debajo de cada una).</p>
+  <section>
+    <iframe src="mapa_enforcement_es.html" title="Operaciones de lucha contra el narcotráfico realizadas por el Ejército mexicano, por administración presidencial (1990–2024)" height="900" loading="lazy"></iframe>
+    <a class="open" href="mapa_enforcement_es.html">Abrir sola ↗</a>
+  </section>
+  <section>
+    <iframe src="comp_aseguramientos_es.html" title="Incautaciones por tipo de droga, México, 1990–2024" height="660" loading="lazy"></iframe>
+    <a class="open" href="comp_aseguramientos_es.html">Abrir sola ↗</a>
+  </section>
+  <section>
+    <iframe src="aseg_tabla_es.html" title="Incautaciones de drogas notificadas por el Ejército mexicano, 1990–junio de 2024, por cantidad" height="780" loading="lazy"></iframe>
+    <a class="open" href="aseg_tabla_es.html">Abrir sola ↗</a>
+  </section>
+  <section>
+    <iframe src="aseg_tendencias_es.html" title="Incautaciones de drogas en México por sustancia, 1990–2024" height="1700" loading="lazy"></iframe>
+    <a class="open" href="aseg_tendencias_es.html">Abrir sola ↗</a>
+  </section>
+  <section>
+    <iframe src="aseg_mapa_puntos_es.html" title="Distribución geográfica de las incautaciones de drogas por década y por sustancia" height="900" loading="lazy"></iframe>
+    <a class="open" href="aseg_mapa_puntos_es.html">Abrir sola ↗</a>
+  </section>
+  <section>
+    <iframe src="lab_mapa_es.html" title="Incautaciones de laboratorios en periodos de 10 años" height="860" loading="lazy"></iframe>
+    <a class="open" href="lab_mapa_es.html">Abrir sola ↗</a>
+  </section>
+<script>
+  // Ajusta la altura de cada iframe a su contenido (mismo origen)
+  document.querySelectorAll("iframe").forEach(f => {
+    const fit = () => { try { f.style.height = f.contentDocument.documentElement.scrollHeight + "px" } catch (e) {} }
+    f.addEventListener("load", () => { fit(); setTimeout(fit, 1500); setTimeout(fit, 4000) })
+  })
+</script>
+</body>
+</html>
