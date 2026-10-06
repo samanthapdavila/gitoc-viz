@@ -2278,6 +2278,9 @@ color: #222 !important;
 
 form[class^="oi-"] { --label-width: 220px; }
 form[class^="oi-"] select { color: #1F2A33; background: #FFFFFF; }
+
+svg[class^="plot-"] { font-size: 13px !important; }
+div[class*="-swatches"] { font-size: 13px !important; }
 </style>
 <style type="text/css">
 :root {
@@ -2323,7 +2326,7 @@ line-height: normal;
 margin-left: auto;
 margin-right: auto;
 color: #333333;
-font-size: 15px;
+font-size: 17px;
 font-weight: normal;
 font-style: normal;
 background-color: #EFEBE6;
@@ -2493,8 +2496,8 @@ margin-top: 0;
 margin-bottom: 0;
 }
 #tabla-aseg .gt_row {
-padding-top: 8px;
-padding-bottom: 8px;
+padding-top: 10px;
+padding-bottom: 10px;
 padding-left: 5px;
 padding-right: 5px;
 margin: 10px;
@@ -2639,7 +2642,7 @@ border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
 #tabla-aseg .gt_sourcenote {
-font-size: 13px;
+font-size: 14px;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
@@ -2698,8 +2701,15 @@ margin-bottom: 0.75em !important;
 #tabla-aseg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
+#tabla-aseg {
+width: 100% !important;
+}
+#tabla-aseg .gt_table {
+width: 100% !important;
+max-width: 1000px;
+}
 #tabla-aseg .gt_stub, #tabla-aseg .gt_col_headings th:first-child {
-min-width: 300px;
+width: 34%;
 }
 </style>
 
