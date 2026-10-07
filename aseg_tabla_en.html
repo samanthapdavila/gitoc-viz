@@ -2314,6 +2314,9 @@ h2.viz-title { font-size: 1rem; line-height: 1.25; margin-bottom: 0.75rem; paddi
 <h2 class="viz-title">
 Reported drug seizures by the Mexican Army, <span style="white-space:nowrap">1990–June</span> 2024, by quantity
 </h2>
+<p class="tabla-hint">
+Swipe to see more →
+</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tabla-aseg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -2721,6 +2724,42 @@ max-width: 1000px;
 #tabla-aseg .gt_stub, #tabla-aseg .gt_col_headings th:first-child {
 width: 34%;
 }
+.tabla-hint {
+display: none;
+}
+@media (max-width: 640px) {
+#tabla-aseg {
+overflow-x: auto !important;
+-webkit-overflow-scrolling: touch;
+}
+#tabla-aseg .gt_table {
+font-size: 15px !important;
+}
+#tabla-aseg .gt_table td, #tabla-aseg .gt_table th {
+white-space: nowrap;
+}
+#tabla-aseg .gt_stub, #tabla-aseg .gt_col_headings th:first-child {
+position: sticky;
+left: 0;
+z-index: 2;
+width: auto;
+box-shadow: 2px 0 4px rgba(0, 0, 0, 0.12);
+}
+#tabla-aseg .gt_stub {
+background-color: #EFEBE6 !important;
+}
+#tabla-aseg .grp {
+position: sticky;
+left: 8px;
+}
+.tabla-hint {
+display: block;
+font-size: 13px;
+color: #403A5E;
+text-align: right;
+margin: 0 0 6px;
+}
+}
 </style>
 
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
@@ -2841,6 +2880,16 @@ width: 34%;
 </div>
 </div>
 </div>
+<script>
+// Envuelve el nombre de cada grupo para que se quede visible al deslizar la tabla en celular
+document.querySelectorAll("#tabla-aseg .gt_group_heading").forEach(function (td) {
+  var span = document.createElement("span");
+  span.className = "grp";
+  span.textContent = td.textContent;
+  td.textContent = "";
+  td.appendChild(span);
+});
+</script>
 
 </main>
 <!-- /main column -->
