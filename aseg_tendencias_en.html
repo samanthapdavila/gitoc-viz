@@ -26719,8 +26719,6 @@ Drug seizures in Mexico by substance, <span style="white-space:nowrap">1990–20
 // para que el iframe se ajuste a la altura real en cualquier pantalla.
 (function () {
   if (window.parent === window) return;
-  // Dentro de un iframe, el alto lo ajusta la página contenedora: sin scroll interno
-  document.documentElement.style.overflowY = "hidden";
   var last = 0;
   function send() {
     var h = Math.ceil(document.documentElement.scrollHeight);
