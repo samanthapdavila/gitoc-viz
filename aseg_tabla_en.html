@@ -2944,9 +2944,18 @@ document.querySelectorAll("#tabla-aseg .gt_group_heading").forEach(function (td)
   // Se espera a que el tamaño se estabilice (250 ms) para no enviar estados transitorios
   var timer;
   function schedule() { clearTimeout(timer); timer = setTimeout(send, 250); }
-  new ResizeObserver(schedule).observe(document.body);
+  // Se observa el contenido (main) y no solo el body: el body mide siempre al menos el
+  // viewport, así que no cambia cuando la gráfica se redibuja a otro tamaño dentro del marco.
+  var ro = new ResizeObserver(schedule);
+  ro.observe(document.body);
+  var main = document.querySelector("main.content");
+  if (main) ro.observe(main);
+  // Las gráficas OJS se dibujan después de cargar; se vigila cuando aparecen o cambian
+  new MutationObserver(schedule).observe(document.body, {childList: true, subtree: true});
   window.addEventListener("load", schedule);
-  setTimeout(schedule, 1500); setTimeout(schedule, 4000);
+  window.addEventListener("resize", schedule);
+  // Reenvío periódico los primeros segundos, por si algún cambio llega tarde (celular, lazy load)
+  var n = 0, tick = setInterval(function () { schedule(); if (++n >= 12) clearInterval(tick); }, 1000);
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
