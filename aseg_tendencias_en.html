@@ -26750,20 +26750,40 @@ Drug seizures in Mexico by substance, <span style="white-space:nowrap">1990–20
 </main>
 <!-- /main column -->
 <script>
-// Avisa a la página que inserta esta gráfica (Shorthand, etc.) cuánto mide,
+// Avisa a la página que inserta esta gráfica (Shorthand, etc.) cuánto mide el contenido,
 // para que el iframe se ajuste a la altura real en cualquier pantalla.
+// Se mide el contenido (no el viewport): así el marco también puede encogerse cuando
+// la gráfica es más baja que la altura fija del iframe (p. ej. los mapas en celular).
 (function () {
   if (window.parent === window) return;
   var last = 0;
+  function contentHeight() {
+    var main = document.querySelector("main.content") || document.body;
+    var pad = parseFloat(getComputedStyle(document.body).paddingBottom) || 0;
+    var h = main.getBoundingClientRect().bottom + window.scrollY + pad;
+    return Math.ceil(h > 0 ? h : document.documentElement.scrollHeight);
+  }
+  // Solo se avisa cuando ya hay una gráfica o tabla dibujada: antes de eso (o entre
+  // redibujos de OJS) el contenido es solo el título y encogería el marco de más.
+  function ready() {
+    return !!document.querySelector('svg[class^="plot-"], .gt_table, table');
+  }
   function send() {
-    var h = Math.ceil(document.documentElement.scrollHeight);
+    if (!ready()) return;
+    var h = contentHeight();
     if (Math.abs(h - last) < 2) return;
+    // Si el contenido ya coincide con el marco (±4px) no hace falta avisar; evita
+    // ciclos con gráficas que se dibujan para llenar el marco exacto.
+    if (Math.abs(h - window.innerHeight) < 4) { last = h; return; }
     last = h;
     window.parent.postMessage({gitocViz: true, height: h, page: location.pathname}, "*");
   }
-  new ResizeObserver(send).observe(document.body);
-  window.addEventListener("load", send);
-  setTimeout(send, 1500); setTimeout(send, 4000);
+  // Se espera a que el tamaño se estabilice (250 ms) para no enviar estados transitorios
+  var timer;
+  function schedule() { clearTimeout(timer); timer = setTimeout(send, 250); }
+  new ResizeObserver(schedule).observe(document.body);
+  window.addEventListener("load", schedule);
+  setTimeout(schedule, 1500); setTimeout(schedule, 4000);
 })();
 </script>
 <script type="ojs-module-contents">
