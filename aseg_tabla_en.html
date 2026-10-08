@@ -2303,6 +2303,13 @@ svg[class^="plot-"] { font-size: 11px !important; }
 div[class*="-swatches"] { font-size: 11px !important; }
 h2.viz-title { font-size: 0.95rem; }
 }
+
+.page-columns.page-rows-contents { grid-template-rows: [content-top] max-content [content-bottom] 0 [page-bottom] !important; }
+main.content { margin-bottom: 0 !important; }
+
+@media (max-width: 640px) {
+main.content { grid-column: screen-start / screen-end !important; }
+}
 </style>
 <style type="text/css">
 :root {
@@ -2791,15 +2798,15 @@ margin: 0 0 6px;
 </tr>
 <tr class="gt_row_group_first even">
 <th id="stub_1_1" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Marijuana</th>
-<td class="gt_row gt_right" headers="Marijuana stub_1_1 total">10,493,310.05</td>
+<td class="gt_row gt_right" headers="Marijuana stub_1_1 total">10 493 310.05</td>
 <td class="gt_row gt_right" headers="Marijuana stub_1_1 media">372.74</td>
 <td class="gt_row gt_right" headers="Marijuana stub_1_1 mediana">6.81</td>
 <td class="gt_row gt_right" headers="Marijuana stub_1_1 minimo">0.00</td>
-<td class="gt_row gt_right" headers="Marijuana stub_1_1 maximo">135,952.76</td>
+<td class="gt_row gt_right" headers="Marijuana stub_1_1 maximo">135 952.76</td>
 </tr>
 <tr class="odd">
 <th id="stub_1_2" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row" style="background-color: #F5F3F0">Marijuana seed</th>
-<td class="gt_row gt_right" headers="Marijuana stub_1_2 total" style="background-color: #F5F3F0">28,429.59</td>
+<td class="gt_row gt_right" headers="Marijuana stub_1_2 total" style="background-color: #F5F3F0">28 429.59</td>
 <td class="gt_row gt_right" headers="Marijuana stub_1_2 media" style="background-color: #F5F3F0">9.42</td>
 <td class="gt_row gt_right" headers="Marijuana stub_1_2 mediana" style="background-color: #F5F3F0">2.00</td>
 <td class="gt_row gt_right" headers="Marijuana stub_1_2 minimo" style="background-color: #F5F3F0">0.00</td>
@@ -2810,18 +2817,18 @@ margin: 0 0 6px;
 </tr>
 <tr class="gt_row_group_first odd">
 <th id="stub_1_3" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Cocaine</th>
-<td class="gt_row gt_right" headers="Cocaine stub_1_3 total">202,593.59</td>
+<td class="gt_row gt_right" headers="Cocaine stub_1_3 total">202 593.59</td>
 <td class="gt_row gt_right" headers="Cocaine stub_1_3 media">25.26</td>
 <td class="gt_row gt_right" headers="Cocaine stub_1_3 mediana">0.04</td>
 <td class="gt_row gt_right" headers="Cocaine stub_1_3 minimo">0.00</td>
-<td class="gt_row gt_right" headers="Cocaine stub_1_3 maximo">11,798.50</td>
+<td class="gt_row gt_right" headers="Cocaine stub_1_3 maximo">11 798.50</td>
 </tr>
 <tr class="gt_group_heading_row even">
 <th colspan="6" id="Traditional opioids" class="gt_group_heading" data-quarto-table-cell-role="th" style="color: #403A5E" scope="colgroup">Traditional opioids</th>
 </tr>
 <tr class="gt_row_group_first odd">
 <th id="stub_1_4" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row" style="background-color: #F5F3F0">Opium gum</th>
-<td class="gt_row gt_right" headers="Traditional opioids stub_1_4 total" style="background-color: #F5F3F0">11,897.79</td>
+<td class="gt_row gt_right" headers="Traditional opioids stub_1_4 total" style="background-color: #F5F3F0">11 897.79</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_4 media" style="background-color: #F5F3F0">10.32</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_4 mediana" style="background-color: #F5F3F0">0.70</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_4 minimo" style="background-color: #F5F3F0">0.00</td>
@@ -2829,7 +2836,7 @@ margin: 0 0 6px;
 </tr>
 <tr class="even">
 <th id="stub_1_5" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Heroin</th>
-<td class="gt_row gt_right" headers="Traditional opioids stub_1_5 total">4,755.37</td>
+<td class="gt_row gt_right" headers="Traditional opioids stub_1_5 total">4 755.37</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_5 media">5.11</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_5 mediana">1.00</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_5 minimo">0.00</td>
@@ -2837,7 +2844,7 @@ margin: 0 0 6px;
 </tr>
 <tr class="odd">
 <th id="stub_1_6" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row" style="background-color: #F5F3F0">Poppy seed</th>
-<td class="gt_row gt_right" headers="Traditional opioids stub_1_6 total" style="background-color: #F5F3F0">7,689.27</td>
+<td class="gt_row gt_right" headers="Traditional opioids stub_1_6 total" style="background-color: #F5F3F0">7 689.27</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_6 media" style="background-color: #F5F3F0">8.08</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_6 mediana" style="background-color: #F5F3F0">1.20</td>
 <td class="gt_row gt_right" headers="Traditional opioids stub_1_6 minimo" style="background-color: #F5F3F0">0.00</td>
@@ -2848,26 +2855,26 @@ margin: 0 0 6px;
 </tr>
 <tr class="gt_row_group_first odd">
 <th id="stub_1_7" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Methamphetamine</th>
-<td class="gt_row gt_right" headers="Methamphetamine stub_1_7 total">346,367.78</td>
+<td class="gt_row gt_right" headers="Methamphetamine stub_1_7 total">346 367.78</td>
 <td class="gt_row gt_right" headers="Methamphetamine stub_1_7 media">46.74</td>
 <td class="gt_row gt_right" headers="Methamphetamine stub_1_7 mediana">0.07</td>
 <td class="gt_row gt_right" headers="Methamphetamine stub_1_7 minimo">0.00</td>
-<td class="gt_row gt_right" headers="Methamphetamine stub_1_7 maximo">15,370.00</td>
+<td class="gt_row gt_right" headers="Methamphetamine stub_1_7 maximo">15 370.00</td>
 </tr>
 <tr class="gt_group_heading_row even">
 <th colspan="6" id="Fentanyl" class="gt_group_heading" data-quarto-table-cell-role="th" style="color: #403A5E" scope="colgroup">Fentanyl</th>
 </tr>
 <tr class="gt_row_group_first odd">
 <th id="stub_1_8" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row" style="background-color: #F5F3F0">Fentanyl ampoules</th>
-<td class="gt_row gt_right" headers="Fentanyl stub_1_8 total" style="background-color: #F5F3F0">4,782.00</td>
+<td class="gt_row gt_right" headers="Fentanyl stub_1_8 total" style="background-color: #F5F3F0">4 782.00</td>
 <td class="gt_row gt_right" headers="Fentanyl stub_1_8 media" style="background-color: #F5F3F0">191.28</td>
 <td class="gt_row gt_right" headers="Fentanyl stub_1_8 mediana" style="background-color: #F5F3F0">131.00</td>
 <td class="gt_row gt_right" headers="Fentanyl stub_1_8 minimo" style="background-color: #F5F3F0">6.00</td>
-<td class="gt_row gt_right" headers="Fentanyl stub_1_8 maximo" style="background-color: #F5F3F0">1,014.00</td>
+<td class="gt_row gt_right" headers="Fentanyl stub_1_8 maximo" style="background-color: #F5F3F0">1 014.00</td>
 </tr>
 <tr class="even">
 <th id="stub_1_9" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Fentanyl</th>
-<td class="gt_row gt_right" headers="Fentanyl stub_1_9 total">4,762.21</td>
+<td class="gt_row gt_right" headers="Fentanyl stub_1_9 total">4 762.21</td>
 <td class="gt_row gt_right" headers="Fentanyl stub_1_9 media">27.06</td>
 <td class="gt_row gt_right" headers="Fentanyl stub_1_9 mediana">10.30</td>
 <td class="gt_row gt_right" headers="Fentanyl stub_1_9 minimo">0.00</td>
@@ -2875,11 +2882,11 @@ margin: 0 0 6px;
 </tr>
 <tr class="odd">
 <th id="stub_1_10" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row" style="background-color: #F5F3F0">Fentanyl pills</th>
-<td class="gt_row gt_right" headers="Fentanyl stub_1_10 total" style="background-color: #F5F3F0">31,246,804.00</td>
-<td class="gt_row gt_right" headers="Fentanyl stub_1_10 media" style="background-color: #F5F3F0">88,267.81</td>
-<td class="gt_row gt_right" headers="Fentanyl stub_1_10 mediana" style="background-color: #F5F3F0">5,406.50</td>
+<td class="gt_row gt_right" headers="Fentanyl stub_1_10 total" style="background-color: #F5F3F0">31 246 804.00</td>
+<td class="gt_row gt_right" headers="Fentanyl stub_1_10 media" style="background-color: #F5F3F0">88 267.81</td>
+<td class="gt_row gt_right" headers="Fentanyl stub_1_10 mediana" style="background-color: #F5F3F0">5 406.50</td>
 <td class="gt_row gt_right" headers="Fentanyl stub_1_10 minimo" style="background-color: #F5F3F0">2.00</td>
-<td class="gt_row gt_right" headers="Fentanyl stub_1_10 maximo" style="background-color: #F5F3F0">2,363,758.00</td>
+<td class="gt_row gt_right" headers="Fentanyl stub_1_10 maximo" style="background-color: #F5F3F0">2 363 758.00</td>
 </tr>
 </tbody><tfoot>
 <tr class="gt_sourcenotes odd">
